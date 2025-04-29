@@ -1,1 +1,3 @@
-# sistempakar
+# FishShiel AI
+
+**FishShield AI** adalah sebuah sistem berbasis kecerdasan buatan (AI) yang dirancang untuk mendiagnosis dan mengidentifikasi penyakit pada ikan lele secara akurat dan efisien. Menggunakan metode *Dempster-Shafer*, sistem ini menggabungkan data gejala yang diamati pada ikan dengan basis pengetahuan mengenai penyakit ikan untuk memberikan prediksi yang lebih tepat. FishShield AI tidak hanya membantu para petani ikan dalam mendeteksi penyakit dengan cepat, tetapi juga menyediakan rekomendasi pengobatan yang dapat dilakukan untuk mencegah kerugian yang lebih besar. Dengan adanya fitur seperti riwayat diagnosa dan saran pengobatan, sistem ini dapat membantu meningkatkan keberlanjutan dan produktivitas dalam budidaya ikan lele, serta memberikan kontribusi pada kualitas hidup ikan yang lebih baik.
