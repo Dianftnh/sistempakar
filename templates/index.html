@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FishShield AI</title>
+</head>
+<body>
+    <h1>FishShield AI - Diagnosa Penyakit Ikan Lele</h1>
+    <form method="post">
+        {% for kode, data in gejala.items() %}
+            <label>
+                <input type="checkbox" name="gejala" value="{{ kode }}">
+                {{ data.nama }} (densitas: {{ data.densitas }})
+            </label><br>
+        {% endfor %}
+        <br>
+        <button type="submit">Diagnosa</button>
+    </form>
+
+    {% if hasil %}
+        <h2>Hasil Diagnosa:</h2>
+        {% if hasil.diagnosa_utama %}
+            <p><strong>Penyakit Utama:</strong> {{ penyakit_map[hasil.diagnosa_utama] }}</p>
+            <p><strong>Detail Diagnosa:</strong></p>
+            <table border="1" cellpadding="5">
+                <tr>
+                    <th>Penyakit</th>
+                    <th>Probabilitas</th>
+                    <th>Tingkat Serangan</th>
+                </tr>
+                {% for kode, info in hasil.probabilitas.items() %}
+                    <tr>
+                        <td>{{ penyakit_map[kode] }}</td>
+                        <td>{{ info.probabilitas }}%</td>
+                        <td>{{ info.tingkat }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p><i>Tidak cukup data untuk diagnosa.</i></p>
+        {% endif %}
+    {% endif %}
+
+</body>
+</html>
